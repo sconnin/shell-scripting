@@ -1,0 +1,20 @@
+
+Environmental variables
+
+VAR="hello" -> we capitalize by convention
+
+
+use (()) to get bash to interpret information inside as a mathematical expression
+
+use $(()) when you want to use something as a variable
+
+Bash understands +-/%*
+
+** exponentiation
+<<,>> left shifting and right shifting
+~ bitwise negation
+&. ^, | are bitwise AND, XOR, and OR
+
+Bash only works with integers. Usually only using addition and subtraction
+
+Bash Built-in Vars - see slides

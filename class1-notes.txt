@@ -1,0 +1,28 @@
+The file should be called bash-fu.txt
+
+grep mouse <alice.txt> # understand redirect -- all lines in Alice that have mouse
+
+# exclude the word doormouse
+
+grep mouse <alice.txt> | grep -v doormouse # removes those lines that have doormouse
+
+# pipe symbol takes the first process std out and redirects it to the std input of the second process
+
+grep mouse <alice.txt> | grep -vi doormouse # ignores case
+
+# select 3rd word from each lines, d=delimiter, -f field
+
+grep mouse <alice.txt> | grep -vi doormouse | cut -d ' ' -f 3
+
+# print last 20 lines of remaining output
+
+grep mouse <alice.txt> | grep -vi doormouse | cut -d ' ' -f 3 | tail -n 20
+
+# retrieve first five of remaining
+
+grep mouse <alice.txt> | grep -vi doormouse | cut -d ' ' -f 3 | tail -n 20 | head -n 5
+
+# convert any lower case  a through f to upper case A through F -> tr (translate)
+
+grep mouse <alice.txt> | grep -vi doormouse | cut -d ' ' -f 3 | tail -n 20 | head -n 5 | tr a-f A-F
+

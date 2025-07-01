@@ -1,0 +1,12 @@
+!#/bin/bash
+
+
+echo "this is bash subshell number: $BASH_SUBSHELL"
+(
+  echo "this is bash shubshell number: $BASH_SUBSHELL"
+  (
+    echo "this is bash subshell number: $BASH_SUBSHELL"
+  )
+)
+
+echo "You have completed the exercise"
